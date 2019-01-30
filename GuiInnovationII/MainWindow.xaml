@@ -1,0 +1,28 @@
+﻿<Window x:Class="GuiInnovationII.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuiInnovationII"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox Name="DropDown" HorizontalAlignment="Left" Margin="8,15,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem IsSelected="True">Adresse</ComboBoxItem>
+            <ComboBoxItem Name="Vej1">Vej1</ComboBoxItem>
+            <ComboBoxItem Name="Vej2">Vej2</ComboBoxItem>
+        </ComboBox>
+
+        <ListView Name="lvUsers" Margin="0,56,-0.4,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="120" DisplayMemberBinding="{Binding ID}" />
+                    <GridViewColumn Header="Antal" Width="120" DisplayMemberBinding="{Binding Antal}" />
+                    <GridViewColumn Header="Modtagelsesdato" Width="120" DisplayMemberBinding="{Binding Modtagelsesdato}" />
+                    <GridViewColumn Header="Kategori" Width="120" DisplayMemberBinding="{Binding Kategori}" />
+                    <GridViewColumn Header="Udløbsdato" Width="120" DisplayMemberBinding="{Binding Udløbsdato}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
